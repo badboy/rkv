@@ -23,6 +23,7 @@ new-ordered-float = "1.0"
 uuid = "0.5"
 serde = "1.0"
 url = "1.7.0"
+clap = "2.32.0"
 
 # Get rid of failure's dependency on backtrace. Eventually
 # backtrace will move into Rust core, but we don't need it here.

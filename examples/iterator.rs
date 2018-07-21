@@ -23,9 +23,7 @@ use std::fs;
 use std::str;
 
 fn main() {
-    let root = Builder::new().prefix("iterator").tempdir().unwrap();
-    fs::create_dir_all(root.path()).unwrap();
-    let p = root.path();
+    let p = std::path::Path::new("./db");
 
     let created_arc = Manager::singleton().write().unwrap().get_or_create(p, Rkv::new).unwrap();
     let k = created_arc.read().unwrap();
